@@ -3,9 +3,13 @@ package com.geNAZt.SwitchAnnounce.Listener;
 import com.geNAZt.SwitchAnnounce.SwitchAnnounce;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
+import net.md_5.bungee.api.event.PostLoginEvent;
 import net.md_5.bungee.api.event.ServerSwitchEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
+
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created for YEAHWH.AT
@@ -13,9 +17,23 @@ import net.md_5.bungee.event.EventHandler;
  * Date: 08.09.13
  */
 public class ServerSwitch implements Listener {
+    private ArrayList<ProxiedPlayer> joined = new ArrayList<ProxiedPlayer>();
+
+    @EventHandler
+    public void onProxyJoin(final PostLoginEvent event) {
+        joined.add(event.getPlayer());
+
+        ProxyServer.getInstance().getScheduler().schedule(SwitchAnnounce.getInstance(), new Runnable() {
+            @Override
+            public void run() {
+                joined.remove(joined.indexOf(event.getPlayer()));
+            }
+        }, 100, TimeUnit.MILLISECONDS);
+    }
+
     @EventHandler
     public void onServerChange(ServerSwitchEvent event) {
-        if(SwitchAnnounce.getConfig().Enabled) {
+        if(SwitchAnnounce.getConfig().Enabled && !joined.contains(event.getPlayer())) {
             String newServer = event.getPlayer().getServer().getInfo().getName();
             String player = event.getPlayer().getName();
 

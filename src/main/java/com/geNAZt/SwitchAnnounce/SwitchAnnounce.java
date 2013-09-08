@@ -13,6 +13,7 @@ import java.util.logging.Level;
  */
 public class SwitchAnnounce extends Plugin {
     private static SwitchAnnounceConfig config;
+    private static SwitchAnnounce instance;
 
     public void onEnable() {
         try {
@@ -25,9 +26,15 @@ public class SwitchAnnounce extends Plugin {
         }
 
         getProxy().getPluginManager().registerListener(this, new ServerSwitch());
+
+        instance = this;
     }
 
     public static SwitchAnnounceConfig getConfig() {
         return config;
+    }
+
+    public static SwitchAnnounce getInstance() {
+        return instance;
     }
 }
