@@ -22,18 +22,17 @@ public class ServerSwitch implements Listener {
     @EventHandler
     public void onProxyJoin(final PostLoginEvent event) {
         joined.add(event.getPlayer());
-
-        ProxyServer.getInstance().getScheduler().schedule(SwitchAnnounce.getInstance(), new Runnable() {
-            @Override
-            public void run() {
-                joined.remove(joined.indexOf(event.getPlayer()));
-            }
-        }, 100, TimeUnit.MILLISECONDS);
     }
 
     @EventHandler
     public void onServerChange(ServerSwitchEvent event) {
-        if(SwitchAnnounce.getConfig().Enabled && !joined.contains(event.getPlayer())) {
+        if(joined.contains(event.getPlayer())) {
+            joined.remove(joined.indexOf(event.getPlayer()));
+
+            return;
+        }
+
+        if(SwitchAnnounce.getConfig().Enabled) {
             String newServer = event.getPlayer().getServer().getInfo().getName();
             String player = event.getPlayer().getName();
 
