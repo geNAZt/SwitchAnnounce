@@ -1,6 +1,6 @@
-package com.geNAZt.SwitchAnnounce.Listener;
+package net.cubespace.Listener;
 
-import com.geNAZt.SwitchAnnounce.SwitchAnnounce;
+import net.cubespace.SwitchAnnounce;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.PostLoginEvent;
@@ -9,12 +9,9 @@ import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 /**
- * Created for YEAHWH.AT
- * User: geNAZt (fabian.fassbender42@googlemail.com)
- * Date: 08.09.13
+ * @author geNAZt
  */
 public class ServerSwitch implements Listener {
     private ArrayList<ProxiedPlayer> joined = new ArrayList<ProxiedPlayer>();

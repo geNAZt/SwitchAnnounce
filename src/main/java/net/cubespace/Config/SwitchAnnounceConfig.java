@@ -1,14 +1,12 @@
-package com.geNAZt.SwitchAnnounce.Config;
+package net.cubespace.Config;
 
-import com.geNAZt.SwitchAnnounce.SwitchAnnounce;
+import net.cubespace.SwitchAnnounce;
 import net.craftminecraft.bungee.bungeeyaml.supereasyconfig.Config;
 
 import java.io.File;
 
 /**
- * Created for YEAHWH.AT
- * User: geNAZt (fabian.fassbender42@googlemail.com)
- * Date: 08.09.13
+ * @author geNAZt
  */
 public class SwitchAnnounceConfig extends Config {
     public SwitchAnnounceConfig(SwitchAnnounce plugin) {

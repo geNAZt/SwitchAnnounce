@@ -1,4 +1,4 @@
 name: SwitchAnnoune
-main : com.geNAZt.SwitchAnnounce.SwitchAnnounce
+main : net.cubespace.SwitchAnnounce
 version: 0.1.2
 author: geNAZt

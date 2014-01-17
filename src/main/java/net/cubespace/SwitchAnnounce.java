@@ -1,15 +1,13 @@
-package com.geNAZt.SwitchAnnounce;
+package net.cubespace;
 
-import com.geNAZt.SwitchAnnounce.Config.SwitchAnnounceConfig;
-import com.geNAZt.SwitchAnnounce.Listener.ServerSwitch;
+import net.cubespace.Config.SwitchAnnounceConfig;
+import net.cubespace.Listener.ServerSwitch;
 import net.md_5.bungee.api.plugin.Plugin;
 
 import java.util.logging.Level;
 
 /**
- * Created for YEAHWH.AT
- * User: geNAZt (fabian.fassbender42@googlemail.com)
- * Date: 08.09.13
+ * @author geNAZt
  */
 public class SwitchAnnounce extends Plugin {
     private static SwitchAnnounceConfig config;
