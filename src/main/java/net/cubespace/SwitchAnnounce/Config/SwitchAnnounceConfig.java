@@ -1,6 +1,6 @@
-package net.cubespace.Config;
+package net.cubespace.SwitchAnnounce.Config;
 
-import net.cubespace.SwitchAnnounce;
+import net.cubespace.SwitchAnnounce.SwitchAnnounce;
 import net.craftminecraft.bungee.bungeeyaml.supereasyconfig.Config;
 
 import java.io.File;

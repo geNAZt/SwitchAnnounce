@@ -1,7 +1,7 @@
-package net.cubespace;
+package net.cubespace.SwitchAnnounce;
 
-import net.cubespace.Config.SwitchAnnounceConfig;
-import net.cubespace.Listener.ServerSwitch;
+import net.cubespace.SwitchAnnounce.Config.SwitchAnnounceConfig;
+import net.cubespace.SwitchAnnounce.Listener.ServerSwitch;
 import net.md_5.bungee.api.plugin.Plugin;
 
 import java.util.logging.Level;
