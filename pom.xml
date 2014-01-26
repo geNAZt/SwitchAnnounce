@@ -6,7 +6,7 @@
 
     <groupId>net.cubespace</groupId>
     <artifactId>SwitchAnnounce</artifactId>
-    <version>0.1.2</version>
+    <version>0.2.0</version>
 
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -58,8 +58,6 @@
             <groupId>net.md-5</groupId>
             <artifactId>bungeecord-api</artifactId>
             <version>1.5-SNAPSHOT</version>
-            <type>jar</type>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.craftminecraft.bungee</groupId>
